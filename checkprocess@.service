@@ -1,0 +1,10 @@
+[Unit]
+Description=Release until the specific desktop enviroment is ready
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/desktop-environment-ready -program=%i
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
