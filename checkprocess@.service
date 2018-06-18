@@ -1,9 +1,9 @@
 [Unit]
-Description=Release until the specific desktop enviroment is ready
+Description=Release until the specific program is running
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/desktop-environment-ready -program=%i
+ExecStart=/usr/bin/checkprocess -program=%i
 RemainAfterExit=true
 
 [Install]
